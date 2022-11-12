@@ -1,0 +1,27 @@
+{
+  "name": "js_40_troll-farm",
+  "version": "1.0.0",
+  "description": "JavaScript task",
+  "main": "index.js",
+  "scripts": {
+    "prepare": "husky install && npx husky init && npx husky add .husky/pre-commit \"npm run lint\"",
+    "lint": "eslint index.js",
+    "dev": "node server/open-url.js && nodemon server/server.js",
+    "start": "node server/open-url.js && node server/server.js"
+  },
+  "author": "John <EternelJohn@gmail.com>",
+  "homepage": "https://github.com/EternelJohn/js_40_troll-farm#readme",
+  "repository": "https://github.com/EternelJohn/js_40_troll-farm",
+  "license": "ISC",
+  "devDependencies": {
+    "eslint": "8.22.0",
+    "express-handlebars": "^6.0.6",
+    "husky": "^8.0.0",
+    "nodemon": "^2.0.20",
+    "open": "^8.4.0"
+  },
+  "dependencies": {
+    "axios": "^1.1.3",
+    "express": "^4.18.2"
+  }
+}

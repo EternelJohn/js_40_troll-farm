@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport"
+	      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Troll Farm</title>
+	<link rel="stylesheet" href="public/index.css">
+</head>
+<body>
+	<section class="post">
+		<header class="post__header">
+			<div class="post__user">
+				<img src="public/assets/sakura_avatar.jpg" class="post__user-avatar" alt="Sakura Haruno" />
+				<p class="post__user-name">Sakura Haruno</p>
+			</div>
+			<h1 class="post__heading">Решила сменить причёску. Ваше мнение?</h1>
+			<p class="post__text">Я решила обрезать волосы, чтоб быть полезнее! Больше я не останусь позади и буду с ними на равных!</p>
+		</header>
+		<main class="post__content">
+			<img src="public/assets/sakura_photo.jpg" class="post__content-photo" alt="Me again!" />
+		</main>
+		<footer class="post__footer">
+			<p class="post__footer-text">
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam, sit!
+			</p>
+		</footer>
+	</section>
+	<section class="comments">
+		<header class="comments__header">
+			<h2 class="comments__title">Комментарии</h2>
+		</header>
+		<main class="comments__wrapper">
+			{{#each trolls}}
+				<div class="comment">
+					<div class="comment__avatar {{this.online}}">
+						<div style="background-color: {{this.background}}"></div>
+						<img src="{{this.avatar.body}}" alt="body part" />
+						<img src="{{this.avatar.head}}" alt="body part" />
+						<img src="{{this.avatar.deco}}" alt="body part" />
+						<img src="{{this.avatar.eyes}}" alt="body part" />
+						<img src="{{this.avatar.eyebrows}}" alt="body part" />
+						<img src="{{this.avatar.mouth}}" alt="body part" />
+						<img src="{{this.avatar.glasses}}" alt="body part" />
+						<img src="{{this.avatar.hair}}" alt="body part" />
+						<img src="{{this.avatar.hands}}" alt="body part" />
+						<img src="{{this.avatar.hat}}" alt="body part" />
+					</div>
+					<h3 class="comment__name">{{this.name}}</h3>
+					<p class="comment__text">{{this.message}}</p>
+				</div>
+			{{/each}}
+		</main>
+	</section>
+</body>
+</html>
